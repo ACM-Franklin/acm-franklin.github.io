@@ -1,0 +1,142 @@
+:root {
+	--blue:       #002b54;
+	--soft-white: #e0e0e0;
+	--soft-black: #101010;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	padding: 0;
+	margin:  0;
+	background: var(--soft-white);
+	font-family: sans-serif;
+}
+
+div.root {
+	display: block;
+	position: relative;
+	
+	max-width: 1280px;
+	min-width: 600px;
+	margin: 32px auto;
+
+	border-radius: 8px;
+	border: 1px solid var(--soft-black);
+
+	min-height: 128px;
+	box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.3);
+	background: white;
+}
+
+div.root > header {
+	width: 100%;
+	background: var(--blue);
+	height: 64px;
+
+	border-radius: 6px 6px 0 0;
+	background-image: url("/assets/franklin_logo_white.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 128px;
+}
+
+div.root > aside {
+	float: left;
+}
+
+div.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 8px 0;
+}
+
+aside.information {
+	border-right: 1px solid var(--blue);
+}
+
+aside.information > p > span {
+	color: var(--blue);
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+aside.information > p {
+	padding: 4px 16px;
+}
+
+aside.information > hr {
+	width: 96%;
+	background: var(--blue);
+	border-color: var(--blue);
+}
+
+aside.information > article {
+	padding: 8px 2%;
+}
+
+aside.information > article > hr {
+	background: var(--blue);
+	border-color: var(--blue);
+}
+
+aside.information > article > h2 {
+	color: var(--blue);
+	margin: 0;
+}
+
+aside.significant-interest-groups {
+	position: relative;
+	border-left: 1px solid var(--blue);
+	padding: 2%;
+}
+
+aside.significant-interest-groups > h2 {
+	display: block;
+	margin: 0;
+	color: var(--blue);
+}
+
+aside.significant-interest-groups > hr {
+	background: var(--blue);
+	border-color: var(--blue);
+}
+
+aside.significant-interest-groups > a {
+	color: black;
+	text-decoration: none;
+}
+
+aside.significant-interest-groups > a > article {
+	width: 80%;
+	margin: 16px auto;
+	text-align: center;
+	padding: 8px;
+
+	border: 1px solid black;
+	border-radius: 4px;
+	box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.3);
+	transition: all 0.5s ease-in-out;
+}
+
+aside.significant-interest-groups > a > article:hover {
+	border-radius: 4px;
+	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.3);
+	transform: translateY(2px);
+}
+
+aside.significant-interest-groups > a > article.programming {
+	text-transform: uppercase;
+	font-family: monospace;
+	background: #1F1F28;
+	color: #DCD7BA;
+	border-color: #090618;
+	border-width: 1px;
+}
+
+aside.significant-interest-groups > a > article.programming:hover {
+	letter-spacing: 0.2em;
+	background: #2F2F4F;
+}
