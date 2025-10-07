@@ -75,6 +75,10 @@ main > h2:before {
 	content: "$ ";
 }
 
+main > p > a {
+	color: var(--dim-blue);
+}
+
 main > menu {
 	display: block;
 }
