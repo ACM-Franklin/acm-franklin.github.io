@@ -1,0 +1,100 @@
+@import "/assets/fira-code/fira_code.css";
+
+/* Kanagawa Dragon Color Palette */
+:root {
+	--background:    #1F1F28;
+	--foreground:    #DCD7BA;
+
+	--dim-black:     #090618;
+	--bright-black:  #727169;
+
+	--dim-red:       #C34043;
+	--bright-red:    #E82424;
+
+	--dim-green:     #76946A;
+	--bright-green:  #98BB6C;
+
+	--dim-orange:    #C0A36E;
+	--bright-orange: #E6C384;
+
+	--dim-blue:      #7E9CD8;
+	--bright-blue:   #7FB4CA;
+
+	--dim-purple:    #957FB8;
+	--bright-purple: #938AA9;
+
+	--dim-cyan:      #6A9589;
+	--bright-cyan:   #7AA89F;
+
+	--dim-yellow:    #C8C093;
+	--bright-yellow: #DCD7BA;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+
+	font-family: "Fira Code", monospace, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+}
+
+header {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 4em;
+	background: var(--background);
+	background: linear-gradient(0deg, var(--dim-blue) 0%, var(--dim-blue) 50%, var(--background) 50%);
+	z-index: 1;
+}
+
+h1 {
+	text-shadow: 1px 1px 2px var(--background);
+	margin: 8px 0 32px 0;
+}
+
+main {
+	position: relative;
+	max-width: 1280px;
+	padding: 8px;
+	z-index: 2;
+	margin: 0 auto;
+}
+
+main > h2 {
+	font-size: 12pt;
+}
+
+main > h2:before {
+	content: "$ ";
+}
+
+main > menu {
+	display: block;
+}
+
+main > menu > a {
+	float: left;
+	color: var(--foreground);
+	text-decoration: none;
+	padding: 4px 8px;
+	margin: 4px 8px;
+	background: var(--bright-black);
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.3);
+}
+
+a.root {
+	background: var(--dim-blue);
+	color: var(--background);
+}
+
+a.github {
+	background: var(--dim-orange);
+	color: var(--background);
+}
